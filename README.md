@@ -173,4 +173,4 @@ mapping, timing, and compatibility coverage are fully qualified.
 
 ## License
 
-GNU-General Public Licensing v3.0
+GNU-General Public License v3.0
