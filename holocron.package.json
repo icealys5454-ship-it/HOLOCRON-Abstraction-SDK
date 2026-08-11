@@ -1,0 +1,26 @@
+{
+  "schema": "holocron.github-package.v1",
+  "name": "HOLOCRON Emulator SDK",
+  "coreAbi": "1.x",
+  "connectors": [
+    "core.wasm-abi",
+    "video.webgl",
+    "input.gamepad",
+    "storage.indexeddb"
+  ],
+  "filters": [
+    {
+      "id": "query",
+      "order": 100
+    },
+    {
+      "id": "sort",
+      "order": 900
+    }
+  ],
+  "abstractClasses": [
+    "Connector<TConfig>",
+    "EmulatorCore",
+    "Filter<T>"
+  ]
+}

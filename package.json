@@ -1,0 +1,19 @@
+{
+  "name": "holocron-emulator-sdk",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Abstract connector/filter SDK for a CMS-hosted WebAssembly/WebGL emulator using the HOLOCRON stable core ABI.",
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "tsc",
+    "test": "npm run build && node --test dist-tests/**/*.test.js",
+    "check": "npm run typecheck && npm run build"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
