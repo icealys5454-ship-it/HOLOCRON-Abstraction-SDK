@@ -1,9 +1,8 @@
-export class GamepadConnector {
-  connect(_target?: HTMLGamepadEventTarget | null) {
-    // placeholder
-  }
+import { Connector } from "../abstract/Connector.js";
 
-  disconnect() {
-    // placeholder
+export class GamepadConnector extends Connector<Record<string, unknown>> {
+  connect(target?: unknown) {
+    void target;
   }
+  disconnect() {}
 }

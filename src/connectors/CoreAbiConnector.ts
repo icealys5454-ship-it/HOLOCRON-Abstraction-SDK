@@ -1,28 +1,25 @@
-import { EmulatorCore, Framebuffer } from "../abstract/EmulatorCore.js";
+import { EmulatorCore } from "../abstract/EmulatorCore.js";
 
 export class CoreAbiConnector extends EmulatorCore {
-  private _opened = false;
-
-  async open(path: string): Promise<void> {
-    // placeholder: real implementation should fetch & instantiate the WASM module
-    this._opened = true;
-    console.warn("CoreAbiConnector.open: not implemented (placeholder)");
+  async open(path: string) {
+    // placeholder implementation
+    void path;
   }
-
-  loadRom(_rom: Uint8Array): void {
-    if (!this._opened) throw new Error("Core not opened");
-    // placeholder
+  loadRom(rom: Uint8Array) {
+    void rom;
   }
-
-  reset(): void {
-    // placeholder
-  }
-
-  runFrame(): void {
-    // placeholder
-  }
-
-  getFramebuffer(): Framebuffer {
+  reset() {}
+  runFrame() {}
+  getFramebuffer() {
     return { width: 0, height: 0, data: new Uint8Array(0) };
+  }
+  getAudioBuffer() {
+    return null;
+  }
+  saveState() {
+    return new Uint8Array(0);
+  }
+  loadState(_state: Uint8Array) {
+    void _state;
   }
 }

@@ -1,11 +1,8 @@
-export class StateStorageConnector {
-  async save(key: string, data: Uint8Array): Promise<void> {
-    // placeholder: e.g. IndexedDB
-    console.warn("StateStorageConnector.save: not implemented", key);
-  }
+import { Connector } from "../abstract/Connector.js";
 
-  async load(key: string): Promise<Uint8Array | null> {
-    console.warn("StateStorageConnector.load: not implemented", key);
-    return null;
+export class StateStorageConnector extends Connector<unknown> {
+  connect(target?: unknown) {
+    void target;
   }
+  disconnect() {}
 }
