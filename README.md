@@ -1,4 +1,4 @@
-<img src="holocron-logo.jpg" align="center" width="128" alt="HOLOCRON logo">
+<img src="holocron-logo.jpg" rwidth="128" alt="HOLOCRON logo">
 
 <h1>HOLOCRON Emulator SDK</h1>
 
