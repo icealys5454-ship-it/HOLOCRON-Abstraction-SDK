@@ -1,17 +1,12 @@
 import { EmulatorCore } from "../abstract/EmulatorCore.js";
+import { Connector } from "../abstract/Connector.js";
 
 export class HolocronRuntime {
-  constructor(
-    private core: EmulatorCore,
-    private video: unknown,
-    private input: unknown
-  ) {}
+  constructor(public core: EmulatorCore, public video: Connector<any>, public input: Connector<any>) {}
 
-  start(_options?: Record<string, unknown>) {
-    console.warn("HolocronRuntime.start: placeholder");
+  start(_opts?: any) {
+    void _opts;
   }
 
-  stop() {
-    console.warn("HolocronRuntime.stop: placeholder");
-  }
+  stop() {}
 }

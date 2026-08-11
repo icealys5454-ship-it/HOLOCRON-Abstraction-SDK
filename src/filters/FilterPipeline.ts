@@ -3,13 +3,19 @@ import { Filter } from "../abstract/Filter.js";
 export class FilterPipeline<T> {
   private filters: Filter<T>[] = [];
 
-  use(filter: Filter<T>): this {
+  use(filter: Filter<T>) {
     this.filters.push(filter);
-    this.filters.sort((a, b) => a.order - b.order || a.id.localeCompare(b.id));
+    this.sort();
     return this;
   }
 
-  run(options: { items: T[] }): T[] {
-    return this.filters.reduce((items, f) => f.run(items), options.items.slice());
+  private sort() {
+    this.filters.sort((a, b) => a.order - b.order || a.id.localeCompare(b.id));
+  }
+
+  run(params: { items: T[]; query?: string }) {
+    let items = params.items;
+    for (const f of this.filters) items = f.run(items, params as any);
+    return items;
   }
 }

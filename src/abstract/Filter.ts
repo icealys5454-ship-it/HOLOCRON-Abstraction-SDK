@@ -1,11 +1,4 @@
 export abstract class Filter<T> {
-  readonly id: string;
-  readonly order: number;
-
-  constructor(id = "", order = 500) {
-    this.id = id;
-    this.order = order;
-  }
-
-  abstract run(input: T[]): T[];
+  constructor(public id = '', public order = 1000) {}
+  abstract run(items: T[], ctx?: Record<string, unknown>): T[];
 }

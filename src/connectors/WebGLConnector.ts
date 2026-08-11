@@ -1,12 +1,8 @@
-export class WebGLConnector {
-  private _canvas: HTMLCanvasElement | null = null;
+import { Connector } from "../abstract/Connector.js";
 
-  connect(canvas: HTMLCanvasElement | null) {
-    this._canvas = canvas;
-    // placeholder: setup WebGL context and rendering pipeline
+export class WebGLConnector extends Connector<HTMLElement | null> {
+  connect(element: HTMLElement | null) {
+    void element;
   }
-
-  disconnect() {
-    this._canvas = null;
-  }
+  disconnect() {}
 }

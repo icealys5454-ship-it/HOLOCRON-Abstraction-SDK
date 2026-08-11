@@ -1,6 +1,1 @@
-export type Game = {
-  id: string;
-  title: string;
-  platform?: string;
-  [key: string]: unknown;
-};
+export type Framebuffer = { width: number; height: number; data: Uint8Array };
