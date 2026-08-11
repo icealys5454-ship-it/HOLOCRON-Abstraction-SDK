@@ -1,6 +1,8 @@
-<img src="holocron-logo.jpg" width="128" alt="HOLOCRON logo">
+<p style="text-align: center;">
+  <img src="holocron-logo.jpg" width="128" alt="HOLOCRON logo">
 
 # HOLOCRON Emulator SDK
+</p>
 
 A GitHub-ready abstraction layer for wiring a CMS game library to a versioned
 WebAssembly/WebGL emulator core.
