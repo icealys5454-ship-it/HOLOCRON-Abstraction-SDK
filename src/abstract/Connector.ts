@@ -1,21 +1,7 @@
-/**
- * Abstract base class for emulator connectors.
- * Defines the contract for connecting peripheral systems to the emulator core.
- */
-export abstract class Connector<TConfig = Record<string, unknown>> {
-  protected config: TConfig;
+export abstract class Connector<TConfig = unknown> {
+  /** Optional id or name for the connector */
+  id?: string;
 
-  constructor(config: TConfig) {
-    this.config = config;
-  }
-
-  /**
-   * Initialize the connector with the given configuration.
-   */
-  abstract initialize(): Promise<void>;
-
-  /**
-   * Cleanup and release resources.
-   */
-  abstract dispose(): Promise<void>;
+  abstract connect(target?: TConfig): Promise<void>;
+  abstract disconnect(): Promise<void>;
 }
