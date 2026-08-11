@@ -173,4 +173,4 @@ mapping, timing, and compatibility coverage are fully qualified.
 
 ## License
 
-MIT. See [LICENSE](LICENSE).
+GPL3.0
